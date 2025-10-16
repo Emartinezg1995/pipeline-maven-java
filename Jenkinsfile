@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-	stage('Checkout') {
-            steps {
-                // Checkout the code from the repository
-                git branch: 'main', url: 'https://github.com/Emartinezg1995/pipeline-maven-java'
-            }
-        }
         stage('Build') {
             steps {
                 echo 'Building...'
@@ -38,3 +32,4 @@ pipeline {
         }
     }
 }
+
